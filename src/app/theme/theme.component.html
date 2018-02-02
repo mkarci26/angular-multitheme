@@ -1,0 +1,22 @@
+<div *ngIf="theme == 'layout1'">
+
+	<layout1-app-header-nav></layout1-app-header-nav>
+	<layout1-app-aside-nav></layout1-app-aside-nav>
+
+	<div id="main-content">{{theme}}
+		<router-outlet></router-outlet>
+	</div>
+
+	<layout1-app-footer></layout1-app-footer>
+</div>
+<div *ngIf="theme == 'layout2'">
+
+	<layout2-app-header-nav></layout2-app-header-nav>
+	<layout2-app-aside-nav></layout2-app-aside-nav>
+
+	<div id="main-content">{{theme}}
+		<router-outlet></router-outlet>
+	</div>
+
+	<layout2-app-footer></layout2-app-footer>
+</div>

@@ -1,0 +1,42 @@
+[
+{
+  "name": "Dashboard",
+  "state": "index",
+  "type": "link",
+  "icon": "flaticon-line-graph",
+  "groups": [1, 2, 3, 4, 5, 6]
+},{
+  "name": "Reports",
+  "state": "report",
+  "type": "link",
+  "icon": "flaticon-layers",
+  "groups": [1]
+},
+{
+  "name": "Sales",
+  "state": "sales",
+  "type": "sub",
+  "icon": "flaticon-coins",
+  "groups": [1, 6],
+  "children": [
+      {"state": "create", "name": "Create Invoice", "type":"link", "icon":"flaticon-cart", "groups":[1,6]},
+      {"state": "list", "name": "All Invoice", "type":"link", "icon":"flaticon-list", "groups":[1,6]},
+      {"state": "processing", "name": "Processing Order", "type":"link", "icon":"flaticon-transport", "groups":[1,6]},
+      {"state": "delivered", "name": "Delivered Order", "type":"link", "icon":"flaticon-squares", "groups":[1,6]}
+    ]
+},
+{
+  "name": "Calendar",
+  "state": "calendar",
+  "type": "link",
+  "icon": "flaticon-calendar",
+  "groups": [2, 3]
+},
+{
+  "name": "Settings",
+  "state": "settings",
+  "type": "link",
+  "icon": "flaticon-settings",
+  "groups": [1]
+}
+]

@@ -1,0 +1,60 @@
+<header #headerPanel>
+	<nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" (click)="isNavCollapsed = !isNavCollapsed" [attr.aria-expanded]="isNavCollapsed" aria-controls="navbarCollapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a [routerLink]="['/index']" class="navbar-brand">
+			<img alt="" src="./assets/logo.png"/>
+		</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isNavCollapsed">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+				<a href="javascript:" class="nav-link">
+					<span>
+						<i class="flaticon-search-1"></i>
+					</span>
+				</a>
+			</li>
+            <li>
+				<a href="javascript:" class="nav-link">					
+					<span class="nav-link">
+						<i class="flaticon-alert-2"></i>
+						<span class="m-badge">
+							3
+						</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:" class="nav-link">
+					<span>
+						<i class="flaticon-clipboard"></i>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:" class="nav-link">
+					<span>
+						<i class="flaticon-profile-1"></i>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:" class="nav-link">
+					<span>
+						<i class="flaticon-menu-button"></i>
+					</span>
+				</a>
+			</li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav><!-- /.navbar -->
+
+</header>

@@ -1,0 +1,103 @@
+<aside #asidePanel>
+	<button class="menubar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="isMenuCollapsed" aria-controls="menuBarCollapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a href="javascript:" class="menubar-toggle" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="isMenuCollapsed" aria-controls="menuBarCollapse">
+		<span>
+			<i class="la la-ellipsis-h"></i>
+		</span>
+	</a>
+	<nav id="menuBarCollapse" [ngbCollapse]="isMenuCollapsed">
+		
+		<ul class="menu-nav">
+			<li class="menu-item">
+				<span class="menu-arrow"></span>
+				<a [routerLink]="['/index']" class="menu-link">
+					<i class="menu-link-icon flaticon-line-graph"></i>
+					<span class="menu-link-text">
+						Dashboard
+					</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<span class="menu-arrow"></span>
+				<a [routerLink]="['/sales']" class="menu-link">					
+					<i class="menu-link-icon flaticon-layers"></i>
+					<span class="menu-link-text">
+						Reports
+					</span>
+				</a>
+			</li>
+			<li class="menu-item menu-active">
+				<span class="menu-arrow"></span>
+				<a [routerLink]="['/sales']" class="menu-link">
+					<i class="menu-link-icon flaticon-coins"></i>
+					<span class="menu-link-text">
+						Sales
+						<span class="menu-badge">
+							4
+						</span>
+					</span>
+				
+					<div class="submenu">
+						<span class="submenu-arrow"></span>
+						<ul>
+							<li class="submenu-item">
+								<a [routerLink]="['/index']" class="submenu-link">
+									<i class="submenu-link-icon flaticon-cart"></i>
+									<span class="submenu-link-text">
+										Create Invoice
+									</span>
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a [routerLink]="['/sales']" class="submenu-link submenu-active">
+									<i class="submenu-link-icon flaticon-list"></i>
+									<span class="submenu-link-text">
+										All Invoice
+									</span>
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a [routerLink]="['/sales']" class="submenu-link">
+									<i class="submenu-link-icon flaticon-transport"></i>
+									<span class="submenu-link-text">
+										Processing Order
+										<span class="menu-badge">
+											2
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a [routerLink]="['/sales']" class="submenu-link">
+									<i class="submenu-link-icon flaticon-squares"></i>
+									<span class="submenu-link-text">
+										Delivered Order
+										<span class="menu-badge">
+											2
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</a>
+			</li>
+			<li class="menu-item">
+				<span class="menu-arrow"></span>
+				<a [routerLink]="['/index']" class="menu-link">
+					<i class="menu-link-icon flaticon-settings"></i>
+					<span class="menu-link-text">
+						Settings
+					</span>
+					
+				</a>
+			</li>
+		</ul>
+	</nav>
+</aside>
+

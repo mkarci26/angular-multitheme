@@ -1,0 +1,4 @@
+<div *ngIf="message" class="alert alert-{{message.type}}">
+	<button type="button" class="close" (click)="close()"></button>
+	<span>{{message.text}}</span>
+</div>

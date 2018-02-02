@@ -1,0 +1,217 @@
+aside{
+	z-index:103;
+}
+nav{
+	position:fixed;
+	width:155px;
+	background:#2c2e3e;
+	height:100vh;
+	top:80px;
+	color:#868aa8;
+	font-size:15px;
+	z-index:101;
+}
+a.menubar-toggle{
+	display:none;
+	font-size: 3rem;
+	-webkit-box-shadow: 0 3px 20px 0 rgba(113,106,202,.17)!important;
+    -moz-box-shadow: 0 3px 20px 0 rgba(113,106,202,.17)!important;
+    box-shadow: 0 3px 20px 0 rgba(113,106,202,.17)!important;
+    border-color: #5867dd!important;
+	-webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 1px 0px 0 6px;
+    box-shadow: 0 3px 20px 0 rgba(113,106,202,.17)!important;
+    border-color: #5867dd!important;
+	background: #ebedf2;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+a.menubar-toggle:hover {
+	background:#5867dd;
+	color:#FFF;
+}
+a.menubar-toggle{
+	position:absolute;
+	right:80px;
+	top: 3px;
+    z-index: 106;
+}
+
+.menu-badge{
+	border-radius: 8px;
+    background: #ff6666;
+    color: #444;
+    font-size: 0.7rem;
+    line-height: 12px;
+    min-height: 12px;
+    min-width: 12px;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 2px;
+	margin-left: 6px;
+}
+.menu-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	text-align:center;
+}
+.menu-nav > li{
+	margin:5px 0;
+	height:70px;
+	padding:12px;
+}
+.menu-nav > li a{
+	cursor:pointer;
+	color:#868aa8;
+	text-decoration:none;
+}
+.menu-nav > li .menu-arrow{
+	display:none !important;
+	position: absolute;
+    left: 100%;
+    z-index: 1;
+    margin-left: -8px;
+    color: #FFF;
+    display: inline-block;
+    overflow: visible;
+}
+.menu-nav > li .menu-arrow:before{
+	position: relative;
+    top: 100%;
+    margin-top: 25px;
+    font-size: 40px;
+	display: inline-block;
+    font-family: Metronic;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 0;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    content: "";
+}
+.menu-nav > li.menu-active{
+	background:#2a2a2a;
+}
+.menu-nav > li.menu-active > .menu-arrow{
+	display:block !important;
+}
+.menu-nav > li.menu-active .menu-link-icon{
+	color:#d279a6;
+}
+.menu-nav > li a:hover{
+	color:#BBB;
+}
+.menu-nav > li .menu-link-icon{
+	font-size:2.4rem;
+	display: block;
+}
+.menu-nav > li .menu-link-icon:before{
+	font-weight: bold;
+}
+.menu-nav li .menu-link-text{
+	font-size:1.3rem;
+	display: block;
+	font-weight: 500;
+}
+
+.submenu{
+	display:none;
+	background: #2c2e3e;
+    z-index: 102;
+    position: relative;
+    top: auto;
+    width: 225px;
+    margin-left: 152px;
+    left: auto;
+    right: auto;
+    margin-top: -60px;
+    border-radius: 4px;
+	-webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-style: preserve-3d;
+
+}
+.submenu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	text-align:left;
+}
+.submenu ul li{
+    padding:10px;
+	margin-left:12px;
+}
+.submenu ul li a{
+	font-size: 1.3rem;
+    font-weight: 500;
+	color:#777;
+}
+.submenu ul li a:hover, .submenu ul li a.submenu-active{
+	color:#d279a6;
+}
+.submenu ul li a .submenu-link-icon{
+	margin:0px 10px 0 0;
+}
+.submenu ul li a .submenu-link-text{
+    margin-right:5px;
+}
+.menu-nav > li:hover .submenu, .menu-nav > li a:hover .submenu, .submenu:hover{
+	display:block;
+}
+.submenu .submenu-arrow {
+	position: absolute;
+	line-height: 0;
+	display: inline-block;
+	overflow: hidden;
+	width: 10px;
+	height: 40px;
+	position: relative;
+	left: 0;
+	margin-left: -9px;
+	left: 1px;
+	top: 12px;
+	color:#2c2e3e;
+	position: absolute;
+}
+.submenu .submenu-arrow:before {
+	position: relative;
+	top: 0;
+	margin-top: 20px;
+	font-size: 40px;
+	display: inline-block;
+	font-family: "Metronic";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 0px;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	content: "";
+}
+
+
+@media screen and (max-width: 800px) {
+	a.menubar-toggle{
+		display:block;
+	}
+	nav{
+		top: 52px;
+	}
+}

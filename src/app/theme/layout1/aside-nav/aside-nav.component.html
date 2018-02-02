@@ -1,0 +1,41 @@
+<aside #asidePanel>
+	<button class="menubar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="isMenuCollapsed" aria-controls="menuBarCollapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a href="javascript:" class="menubar-toggle" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="isMenuCollapsed" aria-controls="menuBarCollapse">
+		<span>
+			<i class="la la-ellipsis-h"></i>
+		</span>
+	</a>
+	<nav id="menuBarCollapse" [ngbCollapse]="isMenuCollapsed">
+		
+		<ul class="menu-nav">
+			<li class="menu-item" *ngFor="let menu of menuData" [ngClass]="{'menu-active': menu.state == parentState}">
+				<span class="menu-arrow"></span>
+				<a [routerLink]="['/', menu.state]" class="menu-link">
+					<i class="menu-link-icon {{menu.icon}}"></i>
+					<span class="menu-link-text">
+						{{menu.name}}
+					</span>
+					<div class="submenu" *ngIf="menu.type == 'sub'">
+						<span class="submenu-arrow"></span>
+						<ul>
+							<li class="submenu-item"  *ngFor="let child of menu.children">
+								<a [routerLink]="['/', menu.state, child.state]" class="submenu-link" [ngClass]="{'submenu-active': child.state == childState}">
+									<i class="submenu-link-icon {{child.icon}}"></i>
+									<span class="submenu-link-text">
+										{{child.name}}
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</aside>
+
